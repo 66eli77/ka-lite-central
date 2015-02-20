@@ -13,6 +13,9 @@
           <title>{% block title %}{{ title }} |{% endblock title %} {% block title_tagline %}KA Lite: An Offline, Installable Version of Khan Academy{% endblock title_tagline %}</title>
           {% endblock %}
 
+          <!-- TODO(jamalex): Without including this, a lot of Bootstrap classes used on distributed server, such as row/columns, wasn't properly styled -->
+          <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}"></link>
+
           {% if debug  %}
           <link rel="stylesheet/less" type="text/css" href="{% static 'less/bootstrap/bootstrap.less' %}"></link>
           <link rel="stylesheet/less" type="text/css" href="{% static 'less/bootstrap/responsive.less' %}"></link>
@@ -173,7 +176,7 @@
                 <div class="span12 float-right">
                 {% block attribution %}
                     <p>
-                        &copy; 2014 <a href="//learningequality.org/about/">Foundation for Learning Equality, Inc</a>
+                        &copy; 2015 <a href="//learningequality.org/about/">Foundation for Learning Equality, Inc</a>
                     </p>
                     <p>
                         Except where otherwise noted, content on this site is licensed under a<br/>
